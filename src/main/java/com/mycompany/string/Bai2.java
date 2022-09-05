@@ -11,25 +11,30 @@ import java.util.Scanner;
  * @author Admin
  */
 public class Bai2 {
-
+    
+    Scanner sc = new Scanner(System.in);
+    
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Moi ban nhap 1 chuoi bat ki: ");
-        String str = sc.nextLine();
-        for (int i = 0; i < str.length(); i++) {
+        System.out.print("Moi ban nhap mot chuoi ki tu bat ki: ");
+        String str = new Scanner(System.in).nextLine();
+        chuyenDoi(str);
+    }
+    
+    public static void chuyenDoi(String s) {
+        String s1 = s.toLowerCase();
+        char[] arr = s1.toCharArray();
+        String[] arr2 = new String[100];
+        
+        for (int i = 0; i < arr.length; i++) {
+            arr2[i] = String.valueOf(arr[i]);
+        }
+        for (int i = 0; i < arr.length; i++) {
             if (i % 2 == 0) {
-                str.indexOf(str);
-                str.toUpperCase();
-            } else {
-                str.indexOf(str);
-                str.toLowerCase();
+                arr2[i] = arr2[i].toUpperCase();
             }
         }
-    }
-
-    public static void getIndex(String str) {
-        for (int i = 0; i < str.length(); i++) {
-            str.indexOf(i);
+        for (int j = 0; j < arr.length; j++) {
+            System.out.print(arr2[j]);
         }
     }
 }
